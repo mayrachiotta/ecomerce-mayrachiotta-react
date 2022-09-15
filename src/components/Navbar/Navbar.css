@@ -5,7 +5,7 @@
     display: grid;
     background-color: #ecebe3;
     grid-template-columns: 3fr 3fr 3fr;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     padding: 10px;
 
@@ -16,11 +16,12 @@
 }
 
 .img {
-    width: 150px;
+    width: 250px;
 
 }
 .navbarTitle {
     color: #023a47;
+    font-size: 25px;
     font-family: 'Fredoka One', cursive;
     margin-left: 10px;
     
@@ -34,8 +35,9 @@
     
     padding: 15px 15px;
     list-style: none;
-    font-size: 18px;
+    font-size: 22px;
     color: #023a47;
+
     font-family: 'Fredoka One', cursive;
-    font-weight: 600;
+    
 }
