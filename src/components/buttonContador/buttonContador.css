@@ -1,0 +1,14 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.count {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    background-color:#ecebe3;
+    color: #023a47;
+    margin: 10px 10px;
+    
+    
+}

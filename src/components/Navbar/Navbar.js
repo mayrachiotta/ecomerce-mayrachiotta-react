@@ -9,7 +9,7 @@ function Navbar() {
     return (
         <div className="navbar">
             <h2 className="navbarTitle">
-                <strong> Reserva Online</strong> 
+                <strong> Pedido Online </strong> 
             </h2>
             <div className='navbarImgContainer'>
                  <img src={LogoPrincipal_sn} Alt='img' className='img'></img>

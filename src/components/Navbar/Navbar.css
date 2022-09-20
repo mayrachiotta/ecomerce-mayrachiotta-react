@@ -3,9 +3,9 @@
 }
 .navbar { 
     display: grid;
+    height: 90px;
     background-color: #ecebe3;
     grid-template-columns: 3fr 3fr 3fr;
-    align-items: flex-end;
     justify-content: center;
     padding: 10px;
 
@@ -16,28 +16,27 @@
 }
 
 .img {
-    width: 250px;
+    width: 180px;
 
 }
 .navbarTitle {
     color: #023a47;
-    font-size: 25px;
-    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+   font-family: 'Roboto Slab', serif;
     margin-left: 10px;
     
 }
 .navbarUl {
     display: flex;
-    justify-content: flex-end;
     
 }
 .navbarLi {
     
     padding: 15px 15px;
     list-style: none;
-    font-size: 22px;
+    font-size: 20px;
     color: #023a47;
-
-    font-family: 'Fredoka One', cursive;
+    
+   font-family: 'Roboto Slab', serif;
     
 }
