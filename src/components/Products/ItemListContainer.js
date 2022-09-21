@@ -1,38 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from './cards';
 import "./cardStyle.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faBowlFood}  from "@fortawesome/free-solid-svg-icons";
+import getItems from "../../services/mockAPI"
 
-function ItemListContainer (props) {
+function ItemListContainer() {
+
+    let [data, setData] = useState([]);
+
+    useEffect(() => {
+        getItems().then((respuestaDatos) => { setData(respuestaDatos); });
+    },
+        []
+    );
+
+
     return (
-        <div className='ItemsContainer'>
-            <h1>{props.greeting} <FontAwesomeIcon icon={faBowlFood}/> </h1>
-            
-            <div className='mainContainer'>
-                <Card 
-                 img="https://assets.unileversolutions.com/recipes-v2/237341.jpg"
-                 title="CLASICO"
-                 description="Salmón crudo, palta y queso Philadelphia"
-                 price="$1000"
-                 initialStock= {1}
-                 endStock={5}/>
-                 
-                <Card 
-                img="https://www.lanacion.com.ar/resizer/Ht80UKFdMaTR6DJPC1Nlnt3dEx8=/309x206/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/AXMW5TBU55EUZO3OT4KW4473FQ.jpg"
-                title="PALTOSO"
-                description="Salmón crudo, palta y queso Philadelphia (Arroz-Alga-Palta)"
-                price="$1500"
-                initialStock= {1}
-                endStock={10}/>
-                <Card 
-                img="https://assets.unileversolutions.com/recipes-v2/237341.jpg"
-                title="PASTA DE SALMON"
-                description="Pasta de Salmón cocido con verdeo y queso Philadelphia (Arroz-Alga)"
-                price="$3000"
-                initialStock= {1}
-                endStock={8}/>
-                
+        <div>
+            <div className='ContainerCard'>
+                {
+                    data.map((item) => {
+                        console.log(item.img)
+                        return <Card //La key se le asigna al primer elemento que se retorne
+                            key={item.img}
+                            img={item.img}
+                            title={item.title}
+                            description={item.description}
+                            stock={item.stock}
+                            price={item.price} />
+                    })
+                }
             </div>
         </div>
     );
