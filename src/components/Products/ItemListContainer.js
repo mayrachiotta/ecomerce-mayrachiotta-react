@@ -16,7 +16,7 @@ function ItemListContainer() {
 
     return (
         <div>
-            <div className='ContainerCard'>
+            <div className='ContainerCard' style={{ backgroundImage: `url(${"/assets/sushi/sushi-back.png"})` }}>
                 {
                     data.map((item) => {
                         console.log(item.img)

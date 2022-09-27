@@ -1,0 +1,50 @@
+* {
+    
+    font-family: 'Fredoka One', cursive;
+}
+
+.detailCardContainer {
+
+    background-color: #ecebe3;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 150px 20px;
+}
+
+.detailImgContainer {
+    
+    width: 400px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+    background-color: #ecebe3;
+    padding: 5px 5px;
+}
+
+.img-detail {
+    
+    width: 100%;
+    overflow: hidden;  
+}
+
+.detailTitle {
+    padding-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.detailPrice {
+    padding-top: 30px;
+}
+.detailItem {
+    height: 200px;
+    color: #023a47;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    padding: 10px 10px;
+    color: #ecebe3;
+    background-color: #023a47;
+    margin-top: 40px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}

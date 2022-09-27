@@ -4,7 +4,7 @@
 .navbar { 
     display: grid;
     height: 90px;
-    background-color:#025b6d;
+    background-color: #023a47;
     grid-template-columns: 3fr 3fr 3fr;
     justify-content: center;
     padding: 10px;
@@ -19,21 +19,25 @@
     width: 180px;
 
 }
-.img2 {
-    height: 80px;
-    padding: 5px 20px;
-}
-
 .navbarUl {
     display: flex;
     
+}
+
+.navbarTitle {
+   
+color: #ecebe3;
+font-family: 'Fredoka One';
+font-size: 25px ;
+
+
 }
 .navbarLi {
     
     padding: 15px 20px;
     list-style: none;
     font-size: 20px;
-    color:  #ecebe3;;
+    color: #ecebe3;
     
    font-family: 'Fredoka One', cursive;
     

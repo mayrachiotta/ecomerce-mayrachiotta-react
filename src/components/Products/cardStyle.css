@@ -1,10 +1,12 @@
 .ContainerCard {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 10px 10px;
   flex-wrap: wrap;
   padding-top: 100px;
-  background-color: #ecebe3;
+  background-color: #ecebe3;  
+  
+  /* #ecebe3 */
 }
 
 .card-img {
@@ -43,16 +45,15 @@
 }
 
 .description-menu {
+  
+  font-family: 'Fredoka One', cursive;  
   font-size: 13px;
-  padding: 5px;
 }
 
-h1 {
-  font-family: 'Roboto Slab', serif;
-  font-size: 35px;
-  color: #025b6d;
-  margin-left: 15px;
-  padding: 10px 10px;
+.card-title {
+  font-family: 'Fredoka One', cursive;
+  color:  #023a47;
+  font-size: 25px;
 
 }
 
@@ -65,3 +66,16 @@ h1 {
   color: #025b6d;
   padding: 10px;
 }
+
+.containerSelect {
+display: flex;
+flex-direction: column;
+
+}
+.iconPlus {
+  color: #023a47;
+  font-size: 35px;
+  align-self: flex-end;
+  padding: 10px 10px; 
+}
+

@@ -8,7 +8,7 @@ function Navbar() {
     console.log(iconList)
     return (
         <div className="navbar">
-           <img src='/assets/sushi/sushi-nav.png' className='img2'></img>
+           <h3 className='navbarTitle'>Sushi Delivery</h3>
             <div className='navbarImgContainer'>
                  <img src={LogoPrincipal_sn} Alt='img' className='img'></img>
             </div>

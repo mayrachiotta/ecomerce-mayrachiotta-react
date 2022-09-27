@@ -6,8 +6,7 @@ export default function ItemCount(props) {
     const [Count, setClickCount] = useState(props.initial)
     const stock = (props.final)
     const initial = (props.initial)
-
-
+    
     function handleClickAdd() {
         if (Count < stock) {
             setClickCount(Count + 1)
