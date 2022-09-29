@@ -7,7 +7,7 @@
     background-color: #023a47;
     grid-template-columns: 3fr 3fr 3fr;
     justify-content: center;
-    padding: 10px;
+    padding: 5px;
 
 }
 .navbarImgContainer {
@@ -16,7 +16,7 @@
 }
 
 .img {
-    width: 180px;
+    width: 150px;
 
 }
 .navbarUl {
@@ -28,17 +28,16 @@
    
 color: #ecebe3;
 font-family: 'Fredoka One';
-font-size: 25px ;
+font-size: 20px ;
 
 
 }
 .navbarLi {
     
-    padding: 15px 20px;
+    padding: 10px 15px;
     list-style: none;
-    font-size: 20px;
+    font-size: 16px;
     color: #ecebe3;
-    
    font-family: 'Fredoka One', cursive;
     
 }

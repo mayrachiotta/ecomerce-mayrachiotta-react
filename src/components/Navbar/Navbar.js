@@ -3,6 +3,7 @@ import LogoPrincipal_sn from './imagenes-navbar/LogoPrincipal_sn.png';
 import * as iconList from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faCartShopping}  from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 
 function Navbar() {
     console.log(iconList)
@@ -13,10 +14,25 @@ function Navbar() {
                  <img src={LogoPrincipal_sn} Alt='img' className='img'></img>
             </div>
             <ul className="navbarUl">
-                <li className="navbarLi"> Menu </li>
-                <li className="navbarLi"> Delivery </li>
-                <li className="navbarLi"> Contact </li>
+                <Link to = "/" style={{textDecoration: 'none'}}>
+                    <li className='navbarLi'>Menus</li>
+                </Link>
+                <Link to = "/categoria/cocido" style={{textDecoration: 'none'}}>
+                    <li className='navbarLi' >Cocido</li>
+                </Link>
+                
+                <Link to = "/categoria/crudo" style={{textDecoration: 'none'}}>
+                    <li className='navbarLi'>Crudo</li>
+                </Link>
+                <Link to = "/categoria/sin salmon" style={{textDecoration: 'none'}}>
+                    <li className='navbarLi'>S/salmon</li>
+                </Link>
+                <Link to = "/cart">
+                      
                <li className="navbarLi" ><FontAwesomeIcon icon={faCartShopping}/> </li> 
+                </Link>
+
+              
             </ul>
         </div>
     )

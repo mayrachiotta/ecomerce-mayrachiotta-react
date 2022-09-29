@@ -3,12 +3,16 @@ import {getSingleItem} from '../../services/mockAPI';
 import "./detail.css";
 import ItemCount  from "../buttonContador/contador";
 
+import {useParams} from "react-router-dom";
+
 
 
 function ItemDetailContainer( ) {
     let [data, setData] = useState({});
+
+    const {itemid} = useParams();
     useEffect(() => {
-        getSingleItem(1).then((respuestaDatos) => { setData(respuestaDatos); });
+        getSingleItem(itemid).then((respuestaDatos) => { setData(respuestaDatos); });
     },[]);
 
     return (
@@ -21,8 +25,8 @@ function ItemDetailContainer( ) {
                     <h1 className='detailTitle'>{data.title}</h1>
                     <h4>{data.description}</h4>
                     <h3 className='detailPrice'>${data.price} X 12u</h3>
-                    <ItemCount/>
-                    <p>Stock Diponible{data.stock}</p>
+                    <ItemCount initial={1} final={data.stock} />
+                    <p>Stock Diponible {data.stock}</p>
                     <button className='button'> Añadir al carrito </button>
                 </div>
             </div>

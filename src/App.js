@@ -5,16 +5,23 @@ import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/Products/ItemListContainer';
 import ItemDetailContainer from './components/itemDetail/itemDetail';
 
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 function App() {
 
   return (
-    <>
-      <Navbar/>
-      {/* <ItemListContainer greeting="Menú"/> */}
-      <ItemDetailContainer/>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={
+          <ItemListContainer greeting="Menú" />
+        } />
+        <Route path="/menues/:itemid" element={
+          <ItemDetailContainer />
+        } />
+         <Route path="/categoria/:categ" element={<ItemListContainer/>} />
+      </Routes>
       <Footer/>
-      </>
-    
+    </BrowserRouter>
   );
 }
 
