@@ -4,8 +4,11 @@ import Footer from './components/footer/footer';
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/Products/ItemListContainer';
 import ItemDetailContainer from './components/itemDetail/itemDetail';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Cart from './components/Cart/cart';
 
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
+
 function App() {
 
   return (
@@ -19,6 +22,7 @@ function App() {
           <ItemDetailContainer />
         } />
          <Route path="/categoria/:categ" element={<ItemListContainer/>} />
+        <Route path="/cart" element={<Cart/>} />
       </Routes>
       <Footer/>
     </BrowserRouter>

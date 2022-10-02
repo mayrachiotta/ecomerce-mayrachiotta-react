@@ -40,11 +40,3 @@
     flex-direction: column;
 }
 
-.button {
-    padding: 10px 10px;
-    color: #ecebe3;
-    background-color: #023a47;
-    margin-top: 40px;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-}

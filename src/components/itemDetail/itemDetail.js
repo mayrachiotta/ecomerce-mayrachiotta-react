@@ -1,21 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import {getSingleItem} from '../../services/mockAPI';
+import { getSingleItem } from '../../services/mockAPI';
 import "./detail.css";
-import ItemCount  from "../buttonContador/contador";
+import ItemCount from "../buttonContador/contador";
+import { useParams } from "react-router-dom";
+import Button from '../button/button';
+import { Link } from 'react-router-dom';
+import CircularIndeterminate from '../spinner/spinner';
 
-import {useParams} from "react-router-dom";
 
 
 
-function ItemDetailContainer( ) {
+function ItemDetailContainer() {
+
+    function handleAddtoCart(count) {
+        alert(`agregaste al carro! ${count}`);
+        setIsVisible(false)
+    }
+
     let [data, setData] = useState({});
+    let [isVisible, setIsVisible] = useState(true);
+    let [spinner, setSpinner] = useState(true);
 
-    const {itemid} = useParams();
+    const { itemid } = useParams();
     useEffect(() => {
-        getSingleItem(itemid).then((respuestaDatos) => { setData(respuestaDatos); });
-    },[]);
+        getSingleItem(itemid).then((respuestaDatos) => { setData(respuestaDatos)
+        setSpinner(false);});
+    }, [itemid]);
+    
+    
 
-    return (
+    return ( spinner ?  <CircularIndeterminate/> :
         <div>
             <div className='detailCardContainer'>
                 <div className='detailImgContainer'>
@@ -25,9 +39,12 @@ function ItemDetailContainer( ) {
                     <h1 className='detailTitle'>{data.title}</h1>
                     <h4>{data.description}</h4>
                     <h3 className='detailPrice'>${data.price} X 12u</h3>
-                    <ItemCount initial={1} final={data.stock} />
                     <p>Stock Diponible {data.stock}</p>
-                    <button className='button'> Añadir al carrito </button>
+                    {isVisible ? 
+                        <ItemCount initial={1} final={data.stock} onAddtoCart={handleAddtoCart} /> :
+                        <Link to = {"/cart"} > <Button color={"#023a47"} onClick={() => {}}>Finalizar compra</Button></Link>
+                    }
+
                 </div>
             </div>
         </div>

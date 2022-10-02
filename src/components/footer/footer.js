@@ -4,7 +4,6 @@ import Box from "@material-ui/core/Box";
 import { Link } from "@material-ui/core";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import Image from 'material-ui-image';
 
 export default function Footer() {
     return <footer>
@@ -15,7 +14,7 @@ export default function Footer() {
             color="white"
             height={5}>
             <Container maxWidth="lg">
-                <Grid container spacing={12}>
+                <Grid container>
                     <Grid item xs={3} sm={4}>
                         <h4 fontFamily="font-family: 'Fredoka One', cursive;">© 2022 Mayra D Chiotta</h4>
                     </Grid>
