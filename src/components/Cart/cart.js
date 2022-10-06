@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { cartContext } from "../../context/cartContext";
 
 function Cart() {
+    const { getTotalItemsCart } = useContext(cartContext);
     return (
-        <div>
-            <h1>Elemento CART</h1>
-        </div>
+            <span>{getTotalItemsCart()}</span>
     )
-
-
-
 }
 
-export default Cart;
+export default Cart; 

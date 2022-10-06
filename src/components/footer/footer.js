@@ -1,3 +1,4 @@
+import React from 'react';
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
@@ -5,9 +6,9 @@ import { Link } from "@material-ui/core";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
+
 export default function Footer() {
-    return <footer>
-        <Box
+   return <Box
             px={{ xs: 3, sm: 10 }}
             py={{ xs: 5, sm: 10 }}
             bgcolor="text.secondary"
@@ -32,5 +33,4 @@ export default function Footer() {
                 </Grid>
             </Container>
         </Box>
-    </footer>;
 }

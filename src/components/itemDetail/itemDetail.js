@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { getSingleItem } from '../../services/mockAPI';
 import "./detail.css";
 import ItemCount from "../buttonContador/contador";
@@ -6,14 +6,17 @@ import { useParams } from "react-router-dom";
 import Button from '../button/button';
 import { Link } from 'react-router-dom';
 import CircularIndeterminate from '../spinner/spinner';
+import {cartContext} from '../../context/cartContext';
 
 
 
 
 function ItemDetailContainer() {
+    //Conecto al context con UseContext
+    const {addItem} = useContext (cartContext)
 
     function handleAddtoCart(count) {
-        alert(`agregaste al carro! ${count}`);
+        addItem(data, count) 
         setIsVisible(false)
     }
 

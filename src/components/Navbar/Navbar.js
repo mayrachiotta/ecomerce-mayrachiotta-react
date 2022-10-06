@@ -3,6 +3,7 @@ import LogoPrincipal_sn from './imagenes-navbar/LogoPrincipal_sn.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faCartShopping}  from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
+import Cart from '../Cart/cart';
 
 function Navbar() {
     // console.log(iconList)
@@ -28,7 +29,7 @@ function Navbar() {
                 </Link>
                 <Link to = "/cart">
                       
-               <li className="navbarLi" ><FontAwesomeIcon icon={faCartShopping}/> </li> 
+               <li className="navbarLi" ><FontAwesomeIcon icon={faCartShopping}/> <Cart/> </li> 
                 </Link>
 
               
