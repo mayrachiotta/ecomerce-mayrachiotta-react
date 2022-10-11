@@ -40,7 +40,6 @@ function ItemListContainer() {
                 {spinner ?
                     <CircularIndeterminate /> :
                     data.map((item) => {
-                        console.log(item.img)
                         return <Card //La key se le asigna al primer elemento que se retorne
                             key={item.img}
                             id={item.id}

@@ -1,0 +1,31 @@
+.ContainerTable {
+    padding: 100px 50px 50px;
+}
+
+.containerbuttonEmptyCart {
+
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+}
+
+.buttonCart {
+
+    background-color: #023a47;
+    color: #ecebe3;
+    letter-spacing: 0.5px;
+    border-color: #023a47;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+.ContainerAd {
+    padding: 50px 50px;
+    color: #023a47;
+    height: 210px;
+
+}
+
+.Ad {
+    margin-bottom: 15px;
+}

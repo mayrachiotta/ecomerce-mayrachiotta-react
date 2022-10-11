@@ -1,12 +1,9 @@
 import './Navbar.css'
 import LogoPrincipal_sn from './imagenes-navbar/LogoPrincipal_sn.png';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faCartShopping}  from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
-import Cart from '../Cart/cart';
+import CartWidget from '../Cart/cartWidget';
 
 function Navbar() {
-    // console.log(iconList)
     return (
         <div className="navbar">
            <h3 className='navbarTitle'>Sushi Delivery</h3>
@@ -29,7 +26,7 @@ function Navbar() {
                 </Link>
                 <Link to = "/cart">
                       
-               <li className="navbarLi" ><FontAwesomeIcon icon={faCartShopping}/> <Cart/> </li> 
+               <li className="navbarLi" ><CartWidget/> </li> 
                 </Link>
 
               

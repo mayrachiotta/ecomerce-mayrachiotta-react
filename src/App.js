@@ -4,6 +4,7 @@ import Footer from './components/footer/footer';
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/Products/ItemListContainer';
 import ItemDetailContainer from './components/itemDetail/itemDetail';
+import Cart from './components/Cart/cart';
 import { BrowserRouter, Routes, Route } from "react-router-dom";  
 import CartContextProvider from './context/cartContext';
 
@@ -21,7 +22,7 @@ function App() {
             <ItemDetailContainer />
           } />
           <Route path="/categoria/:categ" element={<ItemListContainer />} />
-          <Route path="/cart" />
+          <Route path="/cart" element={<Cart/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>

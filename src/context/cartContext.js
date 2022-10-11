@@ -19,7 +19,6 @@ function CartContextProvider({ children }) {
         } else {
             let newCart = cart.map((item) => item);
             newCart.push({ ...item, count: count }) //... Traigo todas las propiedades de item
-            console.log(newCart)
             setCart(newCart);
 
         }
@@ -29,6 +28,10 @@ function CartContextProvider({ children }) {
         let total = 0;
         cart.forEach((item) => total += item.count)
         return total;
+    }
+
+    function getTotalAmount() {
+        return cart.reduce((acc, item) => acc + (item.count * item.price), 0);
     }
 
 
@@ -53,7 +56,7 @@ function CartContextProvider({ children }) {
 
     return (
         // Paso objeto VALUE a los comp hijos
-        <cartContext.Provider value={{ cart, addItem, getTotalItemsCart, isInCart, emptyCart, deleteItem, getItemPrice }}>{children}</cartContext.Provider>
+        <cartContext.Provider value={{ cart, addItem, getTotalItemsCart, isInCart, emptyCart, deleteItem, getItemPrice, getTotalAmount }}>{children}</cartContext.Provider>
 
     );
 }

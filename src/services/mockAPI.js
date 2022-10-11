@@ -103,7 +103,6 @@ export default function getItems () {
 } 
 
 export function getItemsbyCategory (categ) {
-    console.log('categ', categ)
     return new Promise ((resolve, reject) => {
 
         let itemFind= data.filter((item) => {
