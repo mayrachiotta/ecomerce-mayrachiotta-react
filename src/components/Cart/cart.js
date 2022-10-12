@@ -54,6 +54,7 @@ function Cart() {
             </TableContainer>
             <div className='containerbuttonEmptyCart'>
                 <button onClick={() => emptyCart()} className= "buttonCart"> Vaciar Carrito </button>
+                <button className= "buttonCart"> Finalizar Compra </button>
             </div>
             </div>
 

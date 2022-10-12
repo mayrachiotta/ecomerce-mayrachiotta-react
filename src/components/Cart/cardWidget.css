@@ -5,7 +5,9 @@
 .containerbuttonEmptyCart {
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 20px 20px;
 }
 
@@ -13,9 +15,10 @@
 
     background-color: #023a47;
     color: #ecebe3;
+    width: 200px;
     letter-spacing: 0.5px;
     border-color: #023a47;
-    border-radius: 10px;
+    margin: 10px 10px;
     padding: 10px 10px;
 }
 

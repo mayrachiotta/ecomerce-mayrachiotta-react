@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { getSingleItem } from '../../services/mockAPI';
+import {getSingleItem} from '../../services/firestore';
 import "./detail.css";
 import ItemCount from "../buttonContador/contador";
 import { useParams } from "react-router-dom";
@@ -26,7 +26,9 @@ function ItemDetailContainer() {
 
     const { itemid } = useParams();
     useEffect(() => {
-        getSingleItem(itemid).then((respuestaDatos) => { setData(respuestaDatos)
+        getSingleItem(itemid).then((respuestaDatos) => { 
+            console.log(itemid)
+            setData(respuestaDatos)
         setSpinner(false);});
     }, [itemid]);
     
