@@ -34,7 +34,7 @@ function ItemListContainer() {
         }
     }, [categ]);
 
-    return (
+    return ( 
         <div>
             <div className='ContainerCard'>
                 {spinner ?

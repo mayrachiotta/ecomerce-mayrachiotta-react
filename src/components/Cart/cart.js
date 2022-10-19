@@ -6,6 +6,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import React, { useContext } from "react";
+import { useNavigate } from 'react-router-dom';
+import {createBuyOrder} from "../../services/firestore";
 import { cartContext } from "../../context/cartContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
@@ -13,8 +15,29 @@ import { Link } from 'react-router-dom';
 import "./cardWidget.css"
 
 
+
+
 function Cart() {
     const { cart, getTotalAmount, deleteItem, emptyCart } = useContext(cartContext);
+    const navigate = useNavigate()
+    function handleCheckout() {
+
+        const orderData = {
+            buyer: {
+                name:"Dani",
+                phone:"154630303",
+                email:"mayraa.chiotta@gmail.com"
+            },
+            items: [],
+            total: 0
+        };
+        
+    createBuyOrder(orderData).then(orderid => {
+        navigate(`/checkout/${orderid}`)
+    });
+    }
+  
+    
     return (
         cart.length ? 
 
@@ -54,7 +77,7 @@ function Cart() {
             </TableContainer>
             <div className='containerbuttonEmptyCart'>
                 <button onClick={() => emptyCart()} className= "buttonCart"> Vaciar Carrito </button>
-                <button className= "buttonCart"> Finalizar Compra </button>
+                <button className= "buttonCart" onClick={handleCheckout}> Finalizar Compra </button>
             </div>
             </div>
 
