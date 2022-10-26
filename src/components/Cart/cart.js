@@ -6,41 +6,23 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import React, { useContext } from "react";
-import { useNavigate } from 'react-router-dom';
-import {createBuyOrder} from "../../services/firestore";
-import { cartContext } from "../../context/cartContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 import "./cardWidget.css"
+import { cartContext } from '../../context/cartContext';
+import CheckOutForm from '../checkoutform/checkoutform';
 
 
 
 
 function Cart() {
-    const { cart, getTotalAmount, deleteItem, emptyCart } = useContext(cartContext);
-    const navigate = useNavigate()
-    function handleCheckout() {
 
-        const orderData = {
-            buyer: {
-                name:"Dani",
-                phone:"154630303",
-                email:"mayraa.chiotta@gmail.com"
-            },
-            items: [],
-            total: 0
-        };
-        
-    createBuyOrder(orderData).then(orderid => {
-        navigate(`/checkout/${orderid}`)
-    });
-    }
+     const context = useContext(cartContext);
+     const { cart, getTotalAmount, deleteItem, emptyCart } = useContext(cartContext);
   
-    
     return (
         cart.length ? 
-
             <div className='ContainerTable'>
                        <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -67,7 +49,7 @@ function Cart() {
                             </TableRow>
                         ))}
                         <TableRow>
-                            <TableCell>Total:</TableCell>
+                            <TableCell> TOTAL</TableCell>
                             <TableCell></TableCell>
                             <TableCell></TableCell>
                             <TableCell>${getTotalAmount()}</TableCell>
@@ -76,12 +58,10 @@ function Cart() {
                 </Table>
             </TableContainer>
             <div className='containerbuttonEmptyCart'>
-                <button onClick={() => emptyCart()} className= "buttonCart"> Vaciar Carrito </button>
-                <button className= "buttonCart" onClick={handleCheckout}> Finalizar Compra </button>
+                <button onClick={() => emptyCart()} className= "buttonVaciar"> Vaciar Carrito </button>
             </div>
+            <CheckOutForm/>
             </div>
-
-     
             :
             <>
              <div className='ContainerAd'>
@@ -89,11 +69,11 @@ function Cart() {
                 <Link to = "/" style={{textDecoration: 'none'}}>
                    <button className='buttonCart'><h3 > IR A MENÚ </h3></button> 
                 </Link>
-
-             </div>
-                
+             </div> 
             </>
     )
+
+
 }
 
 export default Cart; 

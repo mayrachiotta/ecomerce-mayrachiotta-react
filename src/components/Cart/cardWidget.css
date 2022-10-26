@@ -13,13 +13,26 @@
 
 .buttonCart {
 
-    background-color: #023a47;
-    color: #ecebe3;
-    width: 200px;
+    background-color: #fd7272;
+    border-color: #ffa4a4;
+    color: white;
+    width: 80%;
     letter-spacing: 0.5px;
-    border-color: #023a47;
+    border-radius: 10px;
     margin: 10px 10px;
     padding: 10px 10px;
+    align-self: center;
+}
+
+.buttonVaciar {
+    background-color: #ffa4a4;
+    border-color: #ffa4a4;
+    color: white;
+    width: 125px;
+    letter-spacing: 0.5px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    align-self:flex-end;
 }
 
 .ContainerAd {

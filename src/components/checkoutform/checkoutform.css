@@ -1,0 +1,47 @@
+.formContainer {
+
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    align-items: center;
+}
+
+.formCheckOut {
+    margin-top: 20px;
+    padding: 5px 5px;
+    border-radius: 10px;
+
+}
+
+.form {
+    
+    background-color: rgb(206, 197, 197);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.formItem {
+    margin: 10px 10px;
+}
+
+.labelForm {
+     color: black;
+     font-size: 15px;
+     
+
+}
+.inputbox {
+    
+    border-radius: 5px;
+    padding: 5px 5px;
+    width: 100%;
+    margin-top: 3px;
+}
+
+.checkout {
+
+    padding: 30px 30px;
+    color: #fd7272;
+}

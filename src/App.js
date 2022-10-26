@@ -8,6 +8,7 @@ import Cart from './components/Cart/cart';
 import { BrowserRouter, Routes, Route } from "react-router-dom";  
 import CartContextProvider from './context/cartContext';
 import CheckOut from './components/CheckOut/checkout';
+import CheckOutForm from './components/checkoutform/checkoutform';
 
 function App() {
 
