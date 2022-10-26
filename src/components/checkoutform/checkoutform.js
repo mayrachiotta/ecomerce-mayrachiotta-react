@@ -86,7 +86,7 @@ function CheckOutForm() {
                         required
                     />
                 </div>
-                <button onClick={HandleCheckOut} className= "buttonCart"> Finalizar Compra </button>
+                <button className= "buttonCart"> Finalizar Compra </button>
             </form>
 
             </div>

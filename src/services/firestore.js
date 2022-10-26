@@ -54,6 +54,12 @@ export async function createBuyOrder(orderData) {
     return respuesta.id;
 }
 
+export async function getSingleOrder(idParams) {
+    const docRef = doc (firestore, "orders", idParams);
+    const docSnapshot = await getDoc (docRef);
+    return { ...docSnapshot.data(), id: docSnapshot.id}
+}
+
 export async function ExportDataToFirestore () {
     const data =
     [
