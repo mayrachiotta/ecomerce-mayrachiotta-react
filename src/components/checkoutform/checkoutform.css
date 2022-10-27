@@ -45,3 +45,31 @@
     padding: 30px 30px;
     color: #fd7272;
 }
+
+.ordenCompra {
+
+    background-color: #ecebe3;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    
+}
+
+.orderTitle {
+    color: #fd7272;
+    padding-bottom: 20px;
+}
+
+.orderPedido {
+
+    color: #023a47;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height : 25px;
+}
+
+.OrderContact {
+    color: #023a47;
+}
